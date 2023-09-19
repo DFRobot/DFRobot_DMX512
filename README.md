@@ -7,7 +7,7 @@ This is a development board that integrates various functions, including onboard
 
 ## Product Link (https://www.dfrobot.com.cn/)
 
-SKU: SEN0xxx
+SKU: DFR0994
 
 ## Table of Contents
 
