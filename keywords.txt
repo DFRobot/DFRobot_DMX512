@@ -30,6 +30,8 @@ setMinute	KEYWORD2
 setSecond	KEYWORD2
 getTime	KEYWORD2
 getADCData	KEYWORD2
+readPinData	KEYWORD2
+relayOUT	KEYWORD2
 
 
 
@@ -41,37 +43,23 @@ getADCData	KEYWORD2
 #######################################
 # Constants (LITERAL1)
 #######################################
-eRed	LITERAL1
-eGreen	LITERAL1
-eBlue	LITERAL1
-eOutPutRange5V	LITERAL1
-eOutPutRange10V	LITERAL1
-eChannel1	LITERAL1
-eChannel2	LITERAL1
-eChannelAll	LITERAL1
-year	LITERAL1
-month	LITERAL1
-weekday	LITERAL1
-hour	LITERAL1
-minute	LITERAL1
-second	LITERAL1
-eSunDay	LITERAL1
-eMonDay	LITERAL1
-eTuesDay	LITERAL1
-eWednesDay	LITERAL1
-eThursDay	LITERAL1
-eFriDay	LITERAL1
-eSaturDay	LITERAL1
-eJanuary	LITERAL1
-eFebruary	LITERAL1
-eMarch	LITERAL1
-eApril	LITERAL1
+eSun	LITERAL1
+eMon	LITERAL1
+eTues	LITERAL1
+eWed	LITERAL1
+eThur	LITERAL1
+eFri	LITERAL1
+eSat	LITERAL1
+eJan	LITERAL1
+eFeb	LITERAL1
+eMar	LITERAL1
+eApr	LITERAL1
 eMay	LITERAL1
-eJune	LITERAL1
-eJuly	LITERAL1
-eAugust	LITERAL1
-eSeptember	LITERAL1
-eOctober	LITERAL1
-eNovember	LITERAL1
-eDecember	LITERAL1
+eJun	LITERAL1
+eJul	LITERAL1
+eAug	LITERAL1
+eSep	LITERAL1
+eOct	LITERAL1
+eNov	LITERAL1
+eDec	LITERAL1
 

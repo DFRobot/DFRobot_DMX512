@@ -21,6 +21,27 @@
 #define DBG(...)
 #endif
 
+#define PIN_DI1 7
+#define PIN_DI2 10
+#define PIN_DI3 18
+#define PIN_DI4 35
+#define PIN_DI5 36
+#define PIN_DI6 37
+#define PIN_DI7 38
+#define PIN_DI8 39
+#define PIN_OUT 46
+
+typedef enum{
+      DI1,
+      DI2,
+      DI3,
+      DI4,
+      DI5,
+      DI6,
+      DI7,
+      DI8
+}ePin;
+
 class DFRobot_DMX512
 {
 public:
@@ -66,6 +87,19 @@ public:
    */
   
   void write(uint16_t addr, uint8_t data);
+  /**
+   * @brief read pin data
+   * 
+   * @param pin pin number
+   * @return pin data
+  */
+  uint8_t digitalIN(ePin pin);
+  /**
+   * @brief pilot relay
+   * 
+   * @param mode 0:close,1:open
+  */
+  void relayOUT(uint8_t mode);
 
 private:
   TwoWire *_pWire;

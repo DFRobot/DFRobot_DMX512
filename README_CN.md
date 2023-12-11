@@ -10,7 +10,7 @@
 
 ## 产品链接（https://www.dfrobot.com.cn/）
 
-    SKU：DFR0994
+    SKU：SEN0xxx
 
 ## 目录
 

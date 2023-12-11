@@ -99,13 +99,13 @@ public:
    * @brief Day of the week selection
    */
   typedef enum{
-    eSunday = 0,
-    eMonday,
-    eTuesday,
-    eWednesday,
-    eThursday,
-    eFriday,
-    eSaturday,
+    eSun = 0,
+    eMon,
+    eTues,
+    eWed,
+    eThur,
+    eFri,
+    eSat,
   }eWeekDay;
 
   /**
@@ -113,19 +113,21 @@ public:
    * @brief Month selection 
    */
   typedef enum{
-    eJanuary = 1,
-    eFebruary,
-    eMarch,
-    eApril,
+    eJan = 1,
+    eFeb,
+    eMar,
+    eApr,
     eMay,
-    eJune,
-    eJuly,
-    eAugust,
-    eSeptember,
-    eOctober,
-    eNovember,
-    eDecember,
+    eJun,
+    eJul,
+    eAug,
+    eSep,
+    eOct,
+    eNov,
+    eDec,
   }eMonth;
+
+ 
 
   DFRobot_RTC(TwoWire *pWire = &Wire, uint8_t adaddressdr = 0X51);
   /**
@@ -211,6 +213,8 @@ public:
    * @return Time structure
    */
   sTime_t getTime(void);
+
+  
 
 private:
   uint8_t getSecondNumber(uint8_t number);

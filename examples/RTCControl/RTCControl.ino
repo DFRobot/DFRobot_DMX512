@@ -21,9 +21,9 @@ void setup() {
   Serial.println("init succeed");
   rtc.stopClock();
   rtc.setYear(22);
-  rtc.setMonth(rtc.eFebruary);
+  rtc.setMonth(rtc.eFeb);
   rtc.setDay(16);
-  rtc.setWeekDay(rtc.eWednesday);
+  rtc.setWeekDay(rtc.eWed);
   rtc.setHour(8);
   rtc.setMinute(10);
   rtc.setSecond(30);

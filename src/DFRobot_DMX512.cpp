@@ -22,8 +22,17 @@ uint8_t DFRobot_DMX512::begin(void)
   uint8_t head = 0x55;
   uint8_t addrL = 1 & 0xff;
   uint8_t addrH = (1 >> 8 ) & 0xff;
-  _pWire->setPins(1,2);
-  _pWire->begin();
+  pinMode(PIN_DI1,INPUT);
+  pinMode(PIN_DI2,INPUT);
+  pinMode(PIN_DI3,INPUT);
+  pinMode(PIN_DI4,INPUT);
+  pinMode(PIN_DI5,INPUT);
+  pinMode(PIN_DI6,INPUT);
+  pinMode(PIN_DI7,INPUT);
+  pinMode(PIN_DI8,INPUT);
+  pinMode(PIN_OUT,OUTPUT);
+  delay(100);
+  _pWire->begin(1,2);
   _pWire->beginTransmission(_addr);
   if(_pWire->endTransmission() == 0){
     _pWire->beginTransmission(_addr);
@@ -89,5 +98,40 @@ void DFRobot_DMX512::write(uint16_t addr, uint8_t data)
   return 1;
   }
 
+  uint8_t DFRobot_DMX512::digitalIN(ePin pin){
+    uint8_t data = 0;
+    switch(pin){
+      case DI1:
+        data = digitalRead(PIN_DI1);
+      break;
+      case DI2:
+        data = digitalRead(PIN_DI2);
+      break;
+      case DI3:
+        data = digitalRead(PIN_DI3);
+      break;
+      case DI4:
+        data = digitalRead(PIN_DI4);
+      break;
+      case DI5:
+        data = digitalRead(PIN_DI5);
+      break;
+      case DI6:
+        data = digitalRead(PIN_DI6);
+      break;
+      case DI7:
+        data = digitalRead(PIN_DI7);
+      break;
+      case DI8:
+        data = digitalRead(PIN_DI8);
+      break;
+      default:
+      break;
+    }
+    return data;
+  }
 
+ void DFRobot_DMX512::relayOUT(uint8_t mode){
+  digitalWrite(PIN_OUT,mode);
+ }
 
