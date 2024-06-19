@@ -24,7 +24,7 @@ stopClock	KEYWORD2
 setYear	KEYWORD2
 setMonth	KEYWORD2
 setDay	KEYWORD2
-setWeekDay	KEYWORD2
+setWeek	KEYWORD2
 setHour	KEYWORD2
 setMinute	KEYWORD2
 setSecond	KEYWORD2

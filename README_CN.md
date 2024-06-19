@@ -119,12 +119,12 @@
   void setDay(uint8_t day)
 
   /**
-   * @fn setWeekday
+   * @fn setWeek
    * @brief 设置星期
    * @param weekday 选择星期几
    * @return NONE
    */
-  void setWeekDay(eWeekDay weekDay)
+  void setWeek(eWeek week)
 
   /**
    * @fn setHour

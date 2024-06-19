@@ -23,7 +23,7 @@ void setup() {
   rtc.setYear(22);
   rtc.setMonth(rtc.eFeb);
   rtc.setDay(16);
-  rtc.setWeekDay(rtc.eWed);
+  rtc.setWeek(rtc.eWed);
   rtc.setHour(8);
   rtc.setMinute(10);
   rtc.setSecond(30);
@@ -40,7 +40,7 @@ void loop(){
   Serial.print("day:");
   Serial.println(time.day);
   Serial.print("weekday:");
-  Serial.println(time.weekday);
+  Serial.println(time.week);
   Serial.print("hour:");
   Serial.println(time.hour);
   Serial.print("minute:");

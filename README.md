@@ -117,12 +117,12 @@ Before using this library, please download the library files, paste them into th
   void setDay(uint8_t day)
 
   /**
-   * @fn setWeekday
+   * @fn setWeek
    * @brief Set the day of the week
    * @param weekday Day of the week to choose
    * @return NONE
    */
-  void setWeekDay(eWeekDay weekDay)
+  void setWeek(eWeek week)
 
   /**
    * @fn setHour

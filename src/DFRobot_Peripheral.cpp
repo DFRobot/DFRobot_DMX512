@@ -111,10 +111,10 @@ void DFRobot_RTC::setDay(uint8_t day)
   writeReg(_address, DAYS,&data,1);
 }
 
-void DFRobot_RTC::setWeekDay(eWeekDay weekDay)
+void DFRobot_RTC::setWeek(eWeek week)
 {
-  uint8_t data = ((getSecondNumber(weekDay)<<4)| getFirstNumber(weekDay));
-  writeReg(_address, WEEKDAYS,&data,1);
+  uint8_t data = ((getSecondNumber(week)<<4)| getFirstNumber(week));
+  writeReg(_address, WEEK,&data,1);
 }
 
 void DFRobot_RTC::setHour(uint8_t hour)
@@ -142,14 +142,14 @@ sTime_t DFRobot_RTC::getTime(void)
   readReg(_address, YEARS,&year,1);
   readReg(_address, CENTURYMONTHS,&month,1);
   readReg(_address, DAYS,&day,1);
-  readReg(_address, WEEKDAYS,&weekday,1);
+  readReg(_address, WEEK,&weekday,1);
   readReg(_address, HOURS,&hour,1);
   readReg(_address, MINUTES,&minute,1);
   readReg(_address, VLSECONDS,&seconds,1);
   output.year    = bcdToNumber((year&0b11110000)>>4,year&0b00001111);
   output.month   = bcdToNumber((month&0b00010000)>>4,month&0b00001111);
   output.day     = bcdToNumber((day&0b00110000)>>4,day&0b00001111);
-  output.weekday = bcdToNumber(0,weekday&0b00000111);
+  output.week = bcdToNumber(0,weekday&0b00000111);
   output.hour    = bcdToNumber((hour&0b00110000)>>4,hour&0b00001111);
   output.minute  = bcdToNumber((minute&0b01110000)>>4,minute&0b00001111);
   output.second  = bcdToNumber((seconds&0b01110000)>>4,seconds&0b00001111);

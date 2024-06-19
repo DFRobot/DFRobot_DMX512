@@ -70,7 +70,7 @@ typedef struct{
   uint8_t year;
   uint8_t month;
   uint8_t day;
-  uint8_t weekday;
+  uint8_t week;
   uint8_t hour;
   uint8_t minute;
   uint8_t second; 
@@ -84,7 +84,7 @@ class DFRobot_RTC:public DFRobot_Peripheral
   #define MINUTES           0X03
   #define HOURS             0X04
   #define DAYS              0X05
-  #define WEEKDAYS          0X06
+  #define WEEK              0X06
   #define CENTURYMONTHS     0X07
   #define YEARS             0X08
   #define MINUTEALARM       0X09
@@ -95,7 +95,7 @@ class DFRobot_RTC:public DFRobot_Peripheral
 public:
 
   /**
-   * @fn eWeekDays
+   * @fn eWeek
    * @brief Day of the week selection
    */
   typedef enum{
@@ -106,7 +106,7 @@ public:
     eThur,
     eFri,
     eSat,
-  }eWeekDay;
+  }eWeek;
 
   /**
    * @fn eMonth
@@ -176,12 +176,12 @@ public:
   void setDay(uint8_t day);
 
   /**
-   * @fn setWeekday
+   * @fn setWeek
    * @brief Set the day of the week
    * @param weekday Day of the week to choose
    * @return None
    */
-  void setWeekDay(eWeekDay weekDay);
+  void setWeek(eWeek week);
 
   /**
    * @fn setHour
